@@ -1,40 +1,34 @@
-# thecartoonist
+# thewatercolorist
 
 Written and tested on Ubuntu 22.04.
 
-thecartoonist is software to abstract and stylize an input photograph in such a way that the output photograph kinda looks like a cartoon with thick lines and cel shading (toon shading). This is basically a cartoon filter.
-
-thecartoonist is an implementation of:
-
-"Image Abstraction by Structure Adaptive Filtering" by Jan Eric Kyprianidis and Jürgen Döllner.
-
-"Real-Time Video Abstraction" by Holger Winnemöller, Sven C. Olsen, and Bruce Gooch.
+Bousseau et al. pioneered the process of watercolorizing a photograph in "Interactive watercolor rendering with temporal coherence and abstraction" by Adrien Bousseau, Matthew Kaplan, Joelle Tholot, Francois X. Sillion. The idea of darkening/lightening a color image given a grayscale texture image enables to simulate a bunch of watercolor effects including paper texture, turbulent flow, pigment dispersion, and edge darkening. There is another paper that I found quite useful in implementing my own version of Bousseau's watercolorizer, "Expressive Rendering with Watercolor" by Patrick J. Doran and John Hughes, as it discusses Bousseau's algorithm.
 
 To create the executable:
 
-compile the code in directory "thecartoonist/FastNoise-master" using "make -f Makefile_g/Makefile_O"
+compile the code in directory "thewatercolorist/FastNoise-master" using "make -f Makefile_g/Makefile_O"
 
-compile the code in directory "thecartoonist/RGBConverter-master" using "make -f Makefile_g/Makefile_O"
+compile the code in directory "thewatercolorist/RGBConverter-master" using "make -f Makefile_g/Makefile_O"
 
-compile the code in directory "thecartoonist" using "make -f Makefile_g/Makefile_O"
+compile the code in directory "thewatercolorist" using "make -f Makefile_g/Makefile_O"
 
-compile the code in directory "thecartoonist/main" using "make"
+compile the code in directory "thewatercolorist/main" using "make"
 
 Test cases are given in the "test" directory.
 
-Info about thecartoonist (theory behind it and how to use it) can be found here:
+What you would typically do is run thecartoonist (see my other repos) on a given picture to get an abstracted quantized version of the picture (file name should be "abstracted_image_after_quantize.png") and use that as the input for thewatercolorist.
 
-[Non Photorealistic Rendering Software - The Cartoonist](https://3dstereophoto.blogspot.com/2018/07/non-photorealistic-rendering-software_9.html)
+Info about thewatercolorist (theory behind it and how to use it) can be found here:
 
-[Non Photorealistic Rendering - Image Abstraction by Structure Adaptive Filtering](https://3dstereophoto.blogspot.com/2018/05/non-photorealistic-rendering-image.html)
+[Non Photorealistic Rendering Software - The Watercolorist](https://3dstereophoto.blogspot.com/2018/07/non-photorealistic-rendering-software_41.html)
+
+[Non Photorealistic Rendering - Watercolor rendering (watercolorization)](https://3dstereophoto.blogspot.com/2018/05/non-photorealistic-rendering-watercolor.html)
 
 Dependencies (check the Makefiles):
 
 "common" repo
 
-# Disclaimer
-
-The code comes from a "Processing" implementation by Thomas Lindemeier which I ported to C++ and to which I added support for basic image formats: jpeg, png, and tiff.
+# Notes
 
 FastNoise-master comes from github user Auburns. MIT license.
 
