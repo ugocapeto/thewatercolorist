@@ -1,0 +1,7 @@
+abstracted_image_after_quantize.png
+../../texture/free-vector-watercolor-paper-texture.jpg
+-2.0
+-3.0
+5
+-4.0
+watercolor_image.png

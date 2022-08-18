@@ -1,0 +1,2 @@
+objects=\
+RGBConverter.o

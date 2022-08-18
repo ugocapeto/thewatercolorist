@@ -1,0 +1,17 @@
+include objects.h
+#
+PROGRAM = thewatercolorist.o
+#
+CC = g++
+CFLAGS = -g -Wall -std=c++11\
+-I../common
+#
+all: $(PROGRAM)
+#
+$(PROGRAM): $(objects)
+	ld -r -o $@ $(objects)
+#
+.c.o:
+	$(CC) -c $(CFLAGS) $<
+.cpp.o:
+	$(CC) -c $(CFLAGS) $<
